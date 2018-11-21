@@ -6,6 +6,8 @@ const app = express();
 
 app.use(cors({ optionSuccessStatus: 200 }));
 
+// app.enable('trust proxy');
+
 // maybe
 // app.use(express.static('public'));
 
@@ -15,7 +17,19 @@ app.get('/', function(req, res) {
 });
 
 app.get('/api/whoami', function(req, res) {
-  res.json({ message: 'api endpoint' });
+  // console.log(req.ip);
+  // console.log(req.get('Accept-Language'));
+  // console.log(req.get('User-Agent'));
+
+  res.json({
+    ipaddress: {
+      ip: req.ip,
+      ips: req.ips,
+      'X-Forwarded-For': req.get('X-Forwarded-For')
+    },
+    language: req.get('Accept-Language'),
+    software: req.get('User-Agent')
+  });
 });
 
 export default app;
