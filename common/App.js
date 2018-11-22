@@ -50,14 +50,16 @@ class App extends Component {
               </div>
             </div>
 
-            <div className="card">
-              <h2 className="masthead">Output</h2>
-              <div className="responses">
-                {this.state.responses.map((response, i) => (
-                  <code key={i}>{response}</code>
-                ))}
+            {this.state.responses.length > 0 ? (
+              <div className="card">
+                <h2 className="masthead">Output</h2>
+                <div className="responses">
+                  {this.state.responses.map((response, i) => (
+                    <code key={i}>{response}</code>
+                  ))}
+                </div>
               </div>
-            </div>
+            ) : null}
           </div>
         </main>
         <footer>
