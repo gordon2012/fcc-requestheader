@@ -16,15 +16,18 @@ module.exports = env => {
       }
     })
   ];
-
   if (!production) {
     plugins.push(new StartServerPlugin('server.js'));
     plugins.push(new webpack.HotModuleReplacementPlugin());
   }
 
+  const index = production
+    ? ['./server/index']
+    : ['webpack/hot/poll?1000', './server/index'];
+
   return {
     entry: {
-      index: ['webpack/hot/poll?1000', './server/index']
+      index
     },
     mode: production ? 'production' : 'development',
     watch: !production,
