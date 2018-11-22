@@ -21,7 +21,7 @@ class App extends Component {
     return (
       <div className="app">
         <main>
-          <h1 className="masthead">Request Header Microservice</h1>
+          <h1 className="masthead">Request Header Parser Microservice</h1>
 
           <div className="container">
             <div className="card">
