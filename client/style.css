@@ -27,7 +27,9 @@ code:last-child {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding: 0 1em;
 }
+
 main {
   flex: 1;
 }
@@ -62,10 +64,6 @@ button:hover {
 }
 
 /* Sections */
-.app {
-  padding: 0 1em;
-}
-
 .buttons {
   display: flex;
   flex-direction: column;
