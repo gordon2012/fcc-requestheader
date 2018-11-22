@@ -1,0 +1,56 @@
+/* Debug */
+.rb {
+  border: 3px solid red;
+}
+
+/* Reset */
+body {
+  margin: 0;
+  background: #eee;
+  font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
+}
+code {
+  display: block;
+  padding: 0.5em;
+  font-family: 'Fira Code', 'Fira Mono', monospace;
+  font-size: 13px;
+  border: 1px solid #1b5e20;
+  background: #c8e6c9;
+  margin-bottom: 1em;
+}
+code:last-child {
+  margin-bottom: 0;
+}
+
+/* Elements */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.masthead {
+  text-align: center;
+}
+
+.card {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background: white;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+button {
+  padding: 1em 2em;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background: #7b1fa2;
+}
+button:hover {
+  background: #4a148c;
+}
+
+/* Sections */
+.app {
+  padding: 0 1em;
+}

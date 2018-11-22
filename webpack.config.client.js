@@ -40,6 +40,10 @@ module.exports = env => {
             path.join(__dirname, 'client'),
             path.join(__dirname, 'common')
           ]
+        },
+        {
+          test: /\.css$/,
+          use: ['style-loader', 'css-loader']
         }
       ]
     },
