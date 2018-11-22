@@ -1,13 +1,11 @@
-/* Debug */
-.rb {
-  border: 3px solid red;
-}
-
 /* Reset */
 body {
   margin: 0;
   background: #eee;
   font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
+}
+* {
+  box-sizing: border-box;
 }
 code {
   display: block;
@@ -20,6 +18,16 @@ code {
 }
 code:last-child {
   margin-bottom: 0;
+}
+
+/* Layout */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
 }
 
 /* Elements */
@@ -40,6 +48,7 @@ code:last-child {
 }
 
 button {
+  font-family: 'Lato', 'Helvetica', 'Arial', sans-serif;
   padding: 1em 2em;
   border: none;
   color: white;
@@ -53,4 +62,32 @@ button:hover {
 /* Sections */
 .app {
   padding: 0 1em;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+.buttons > div {
+  margin-bottom: 1em;
+}
+.buttons > div:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 500px) {
+  .buttons {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .buttons > div {
+    margin-bottom: 0;
+  }
+}
+
+footer {
+  padding: 1em 0;
+  text-align: center;
+  font-family: 'Lato', 'Helvetica', 'Arial', sans-serif;
 }
